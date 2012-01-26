@@ -1,0 +1,12 @@
+{
+  "name": "blacksmith-migrate",
+  "version": "0.0.1",
+  "dependencies": {
+    "mysql": "*",
+    "mkdirp": "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6.0"
+  }
+}
