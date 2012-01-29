@@ -1,0 +1,7 @@
+{
+  "db_host": "localhost",
+  "db_user": "root",
+  "db_pass": "",
+  "db_name": "mtambo_habari",
+  "table_prefix": "habari__"
+}

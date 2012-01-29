@@ -1,9 +1,11 @@
 {
   "name": "blacksmith-migrate",
   "version": "0.0.1",
+  "author": "Luke Arduini <luke.arduini@me.com>",
+  "description": "blacksmith migration tool for blogs",
   "dependencies": {
-    "mysql": "*",
-    "mkdirp": "*"
+    "mysql": "0.9.x",
+    "mkdirp": "0.3.x"
   },
   "license": "MIT",
   "engines": {

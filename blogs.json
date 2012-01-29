@@ -1,0 +1,3 @@
+{
+  "habari": "select posts.title, posts.pubdate as date, posts.content as body, users.username as author from [PREFIX]posts as posts left join [PREFIX]users as users on posts.user_id where posts.user_id = users.id"
+}
