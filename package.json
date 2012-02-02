@@ -1,5 +1,5 @@
 {
-  "name": "blacksmith-migrate",
+  "name": "blacksmith-apprentice",
   "version": "0.0.1",
   "author": "Luke Arduini <luke.arduini@me.com>",
   "description": "blacksmith migration tool for blogs",
@@ -9,6 +9,6 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.6.0"
+    "node": ">=0.6.x"
   }
 }

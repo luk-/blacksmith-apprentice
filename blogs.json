@@ -1,3 +1,4 @@
 {
-  "habari": "select posts.title, posts.pubdate as date, posts.content as body, users.username as author from [PREFIX]posts as posts left join [PREFIX]users as users on posts.user_id where posts.user_id = users.id"
+  "habari": "select posts.title, posts.pubdate as date, posts.content as body, users.username as author from [PREFIX]posts as posts, [PREFIX]users as users where posts.user_id = users.id",
+  "wordpress": "select posts.post_title as title, users.display_name as author, unix_timestamp(posts.post_date) as date, posts.post_content as body from [PREFIX]posts as posts, [PREFIX]users as users where posts.post_type='post' and posts.post_author = users.id"
 }

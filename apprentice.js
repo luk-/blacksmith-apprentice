@@ -41,7 +41,7 @@ migration.create_query = function () {
     console.error("error parsing blogs.json \n\n" + e);
   }
 
-  migration.query = blogs.habari.replace(/\[PREFIX\]/g, migration.db_config.table_prefix);
+  migration.query = blogs[migration.db_config.engine].replace(/\[PREFIX\]/g, migration.db_config.table_prefix);
   migrate_steps.emit('query_ready', migration.query);
 
   });
@@ -65,7 +65,7 @@ migration.migrate = function () {
 
       res.forEach (function (val, key) {
         
-        var dir_title = val.title.replace(/\'|\,|\./g, '');
+        var dir_title = val.title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-');
 
         mkdirp('./output/' + dir_title, function (err) {
           if (err) throw err;
@@ -76,9 +76,12 @@ migration.migrate = function () {
             "date": new Date(val.date * 1000).toISOString()
           };
 
+
           page = JSON.stringify(page);
 
-          fs.writeFile('./output/' + dir_title + '/content.md', val.body, function (err) {
+	  var content = val.body.replace("<!--more-->", "##");
+
+          fs.writeFile('./output/' + dir_title + '/content.md', content, function (err) {
             if (err) throw err;
             fs.writeFile('./output/' + dir_title + '/page.json', page, function (err) {
               if (err) throw err;

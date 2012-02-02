@@ -1,7 +1,8 @@
 {
+  "engine": "wordpress",
   "db_host": "localhost",
   "db_user": "root",
   "db_pass": "",
-  "db_name": "mtambo_habari",
-  "table_prefix": "habari__"
+  "db_name": "database_name",
+  "table_prefix": "wp_"
 }
