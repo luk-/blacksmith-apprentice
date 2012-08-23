@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/st-luke/blacksmith-apprentice.png)](http://travis-ci.org/st-luke/blacksmith-apprentice)
 #blacksmith-apprentice
 
 Migrate your posts from your current blog and into a [blacksmith](https://github.com/flatiron/blacksmith)-compatible format.
